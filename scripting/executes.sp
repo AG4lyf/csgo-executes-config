@@ -995,6 +995,7 @@ public void RoundEndUpdates() {
     if (IsPlayer(client) && IsOnTeam(client)) {
       PQ_Enqueue(g_hRankingQueue, client, g_RoundPoints[client]);
       g_LastTeam[client] = GetClientTeam(client);
+      Executes_Message(client, "You scored %d points.", g_RoundPoints[client]);
     }
   }
 
